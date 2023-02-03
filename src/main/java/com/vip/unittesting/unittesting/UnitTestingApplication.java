@@ -10,4 +10,5 @@ public class UnitTestingApplication {
 		SpringApplication.run(UnitTestingApplication.class, args);
 	}
 
+	
 }
