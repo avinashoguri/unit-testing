@@ -21,9 +21,9 @@ public class ItemBusinessService {
 	public List<Item> retriveAllItems(){
 		List<Item> items=repo.findAll();
 		
-		for(Item item:items)
+		for(Item item:items) {
 			item.setValue(item.getPrice()*item.getQty());
-		
+		}
 		return items;
 		
 	}

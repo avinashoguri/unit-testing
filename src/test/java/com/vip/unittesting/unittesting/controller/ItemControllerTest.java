@@ -90,10 +90,8 @@ public class ItemControllerTest {
 		
 		MvcResult result=mockMvc.perform(request)
 				.andExpect(status().isOk())
-				.andExpect(content().json("[{id:2,name:item2,price:10}]"))
+				.andExpect(content().json("[{id:2,name:item2,price:10},{id:3,name:item3,price:20}]"))
 				.andReturn();
-		
-		//Verify 
 		
 		
 		

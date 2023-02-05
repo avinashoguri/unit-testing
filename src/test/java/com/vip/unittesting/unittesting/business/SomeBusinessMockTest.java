@@ -20,7 +20,7 @@ public class SomeBusinessMockTest {
 	SomeBusinessImpl business=new SomeBusinessImpl();
 	
 	@Mock
-	SomeDataService dataServiceMock = mock(SomeDataService.class);
+	SomeDataService dataServiceMock= mock(SomeDataService.class);
 	
 	
 	/*
