@@ -23,13 +23,13 @@ public class ItemController {
 	@GetMapping("/item-from-business-service")
 	public Item itemFromBusinessService() {
 		
-		return businessService.retriveHardCodedItem();
+		return businessService.retreiveHardcodedItem();
 		
 	}
 	
 	@GetMapping("/all-items-from-database")
 	public List<Item> retriveAllItems(){
-		return businessService.retriveAllItems();
+		return businessService.retrieveAllItems();
 		
 	}
 }

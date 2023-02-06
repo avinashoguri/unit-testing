@@ -12,19 +12,19 @@ import com.vip.unittesting.unittesting.model.Item;
 public class ItemBusinessService {
 	
 	@Autowired
-	private ItemRepository repo;
-
-	public Item retriveHardCodedItem() {
-		return new Item(1,"Ball",10,100);
+	private ItemRepository repository;
+	
+	public Item retreiveHardcodedItem() {
+		return new Item(1, "Ball", 10, 100);
 	}
-
-	public List<Item> retriveAllItems(){
-		List<Item> items=repo.findAll();
+	
+	public List<Item> retrieveAllItems() {
+		List<Item> items = repository.findAll();
 		
 		for(Item item:items) {
-			item.setValue(item.getPrice()*item.getQty());
+			item.setValue(item.getPrice() * item.getQty());
 		}
-		return items;
 		
+		return items;	
 	}
 }

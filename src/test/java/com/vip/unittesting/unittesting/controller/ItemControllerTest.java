@@ -60,7 +60,7 @@ public class ItemControllerTest {
 	@Test
 	public void itemFromBusinessService_basic() throws Exception {
 		
-		when(businessService.retriveHardCodedItem()).thenReturn(new Item(2,"Bat",10,100));
+		when(businessService.retreiveHardcodedItem()).thenReturn(new Item(2,"Bat",10,100));
 		
 		
 		RequestBuilder request=MockMvcRequestBuilders
@@ -81,7 +81,7 @@ public class ItemControllerTest {
 	@Test
 	public void retriveAllItems_basic() throws Exception {
 		
-		when(businessService.retriveAllItems()).thenReturn(Arrays.asList(new Item(2,"item2",10,10),new Item(3,"item3",20,15)));
+		when(businessService.retrieveAllItems()).thenReturn(Arrays.asList(new Item(2,"item2",10,10),new Item(3,"item3",20,15)));
 		
 		
 		RequestBuilder request=MockMvcRequestBuilders

@@ -8,15 +8,17 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.vip.unittesting.unittesting.data.ItemRepository;
 import com.vip.unittesting.unittesting.model.Item;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class ItemBusinessServiceTest {
 	
 	@InjectMocks
@@ -30,16 +32,13 @@ public class ItemBusinessServiceTest {
 	public void caluculationOfDataService_basic() {
 		System.out.println("Test started");
 		
-		when(repository.findAll()).thenReturn(Arrays.asList(new Item(2,"item2",10,10),
-													  new Item(3,"item3",20,20)));
+		when(repository.findAll()).thenReturn(Arrays.asList(new Item(2,"item2",10,10),new Item(3,"item3",20,20)));
 		
 		for (Item its:repository.findAll()) {
 			System.out.println(its);
 		}
 		
-		List<Item>items=business.retriveAllItems();
-		
-		System.out.println(items.get(0).getValue()+"---value");
+		List<Item>items=business.retrieveAllItems();
 		
 		
 		assertEquals(100, items.get(0).getValue());
